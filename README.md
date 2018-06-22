@@ -16,12 +16,12 @@ current_folder/
 	/file1.tif  
 	/file2.tif  
 
-target_folder/. 
-	/MODS.xml. 
-	/1. 
-		/OBJ.tif. 
-	/2. 
-		/OBJ.tif. 
+target_folder/   
+	/MODS.xml   
+	/1  
+		/OBJ.tif  
+	/2  
+		/OBJ.tif  
 
 Example 2:
 current_folder/
