@@ -2,7 +2,7 @@
 
 Ruby code to create the right file structure and naming conventions for ingesting Islandora objects. 
 
-## To run
+## Steps for use
 
 <pre><code>ruby [current folder] [target folder]</code></pre>
 
