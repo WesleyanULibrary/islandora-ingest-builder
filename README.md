@@ -10,7 +10,8 @@ Where [current folder] is the file of XML and TIF files you want to ingest, all 
 
 The finished file and folder structure will be similar to the following
 
-Example 1:  
+Example 1: 
+<pre><code>
 current_folder/  
 	/ar1.xml  
 	/file1.tif  
@@ -22,7 +23,7 @@ target_folder/
 		/OBJ.tif  
 	/2  
 		/OBJ.tif  
-
+</code></pre>
 Example 2: 
 <pre><code>
 current_folder/  
@@ -33,7 +34,7 @@ current_folder/
 	/file2.tif  
 	/file3.xml  
 	/file3.tif  
-</code></pre>	
+
 target_folder/  
 	MODS.xml  
 	1/  
@@ -45,7 +46,8 @@ target_folder/
 	3/  
 		/OBJ.tif  
 		/OBJ.xml  
-		
+</code></pre>	
+
 ##Notes on use
 
 The script is based on the presence of XML and TIF files in the original folder, and a specific naming convention for both these files and the copied/renamed files. 
