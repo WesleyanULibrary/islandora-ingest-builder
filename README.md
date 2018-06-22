@@ -23,7 +23,8 @@ target_folder/
 	/2  
 		/OBJ.tif  
 
-Example 2:  
+Example 2: 
+<pre><code>
 current_folder/  
 	/ar1.xml  
 	/file1.xml  
@@ -32,7 +33,7 @@ current_folder/
 	/file2.tif  
 	/file3.xml  
 	/file3.tif  
-	
+</code></pre>	
 target_folder/  
 	MODS.xml  
 	1/  
