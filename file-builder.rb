@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+#get filepath variables from the input
 filePath = ARGV[0]
 newFilePath = ARGV[1]
 
@@ -13,7 +14,6 @@ tifFiles = Array.new
 thefiles = Dir.entries(filePath)
 thefiles.each do |f|
  if !File.directory?(f)
-
 	if File.extname(f).strip.downcase[1..-1] == "xml"
 		xmlCount += 1
 		xmlFiles.push(f)
@@ -27,27 +27,27 @@ end
 #create the new file folder
 Dir.mkdir("#{newFilePath}")
 
-## if only 1 xml file, rename the single xml file to MODS.xml and move the tif files to individual folders #######################
-if (xmlCount == 1) && (xmlFiles[0] != "MODS.xml")
+## if only 1 xml file, rename the single xml file to MODS.xml and move the tif files to individual folders ##
+if xmlCount == 1
 	xmlFile = Dir.glob("#{filePath}/#{xmlFiles[0]}")
 	File.rename(xmlFile[0],"#{newFilePath}/MODS.xml")
-	print "XML file renamed MODS.xml"
-	print "\n"
 	
 	folderNum = 1
-	for t in tifFiles 
+	tifFiles.each do |t|
 		Dir.mkdir("#{newFilePath}/#{folderNum.to_s}")
 		tifFile = Dir.glob("#{filePath}/#{t}")
 		File.rename(tifFile[0],"#{newFilePath}/#{folderNum}/#{t}")
 	
 		folderNum +=1
 	end
+	
+	puts "\nMODS.xml file created and #{folderNum-1} tif files copied into folders\n\n"
 else #if multiple xml files
 	folderNum = 1
 	
-	for x in xmlFiles.reverse
+	xmlFiles.reverse.each do |x|
 		xName = File.basename(x, ".*")
-		for t in tifFiles
+		tifFiles.each do |t|
 			fixedName = t.gsub("cpd", "")
 			fixedName = File.basename(fixedName,".*")
 			if xName == fixedName
@@ -62,6 +62,7 @@ else #if multiple xml files
 			end
 		end
 	end
+	
 	#copy over the last xml file as mods.xml
 	thefiles = Dir.entries(filePath)
 	thefiles.each do |f|
@@ -70,4 +71,9 @@ else #if multiple xml files
 			File.rename(xmlFile[0],"#{newFilePath}/MODS.xml")
 		end
 	end
+	
+	puts "\nMODS.xml file created and #{folderNum-1} tif and xml files copied into folders\n\n"
 end
+
+#delete the original folder
+system("rm -r #{filePath}")
