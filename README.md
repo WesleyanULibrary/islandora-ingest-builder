@@ -4,7 +4,7 @@ Ruby code to create the right file structure and naming conventions for ingestin
 
 ##To run
 
-command: ruby [current folder] [target folder]
+<pre><code>ruby [current folder] [target folder]</code></pre>
 
 Where [current folder] is the file of XML and TIF files you want to ingest, all together in one folder, and [target folder] is the name of the folder which will hold the copied and renamed objects.
 
