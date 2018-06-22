@@ -2,7 +2,7 @@
 
 Ruby code to create the right file structure and naming conventions for ingesting Islandora objects. 
 
-##To run
+## To run
 
 <pre><code>ruby [current folder] [target folder]</code></pre>
 
@@ -48,7 +48,7 @@ target_folder/
 		/OBJ.xml  
 </code></pre>	
 
-##Notes on use
+## Notes on use
 
 The script is based on the presence of XML and TIF files in the original folder, and a specific naming convention for both these files and the copied/renamed files. 
 
