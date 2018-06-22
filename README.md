@@ -23,27 +23,27 @@ target_folder/
 	/2  
 		/OBJ.tif  
 
-Example 2:
-current_folder/
-	/ar1.xml
-	/file1.xml
-	/file1.tif
-	/file2.xml
-	/file2.tif
-	/file3.xml
-	/file3.tif
+Example 2:  
+current_folder/  
+	/ar1.xml  
+	/file1.xml  
+	/file1.tif  
+	/file2.xml  
+	/file2.tif  
+	/file3.xml  
+	/file3.tif  
 	
-target_folder/
-	MODS.xml
-	1/
-		/OBJ.tif
-		/OBJ.xml
-	2/
-		/OBJ.tif
-		/OBJ.xml
-	3/
-		/OBJ.tif
-		/OBJ.xml
+target_folder/  
+	MODS.xml  
+	1/  
+		/OBJ.tif  
+		/OBJ.xml  
+	2/  
+		/OBJ.tif  
+		/OBJ.xml  
+	3/  
+		/OBJ.tif  
+		/OBJ.xml  
 		
 ##Notes on use
 
