@@ -11,10 +11,10 @@ Where [current folder] is the file of XML and TIF files you want to ingest, all 
 The finished file and folder structure will be similar to the following
 
 Example 1:  
-current_folder/. 
-	/ar1.xml. 
-	/file1.tif. 
-	/file2.tif. 
+current_folder/  
+	/ar1.xml  
+	/file1.tif  
+	/file2.tif  
 
 target_folder/. 
 	/MODS.xml. 
